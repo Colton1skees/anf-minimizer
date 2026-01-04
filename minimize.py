@@ -175,7 +175,7 @@ def case2():
 def case3():
     vars = get_n_vars(5)
     (a, b, c, d, e) = vars
-    circuit = (~(((((a^b)^c)^(d&((((a^b)^c)^(e&(((a^b)^c)^(bvalue(0,1)&((a^b)^c)))))^(bvalue(0,1)&((a^b)^c)))))^(e&(((a^b)^c)^(bvalue(0,1)&((a^b)^c)))))^(bvalue(0,1)&((a^b)^c))))^(~a&~b&~c&~d&~e)
+    circuit = (~(((((a^b)^c)^(d&((((a^b)^c)^(e&(((a^b)^c)^(tm.bvalue(0,1)&((a^b)^c)))))^(tm.bvalue(0,1)&((a^b)^c)))))^(e&(((a^b)^c)^(tm.bvalue(0,1)&((a^b)^c)))))^(tm.bvalue(0,1)&((a^b)^c))))^(~a&~b&~c&~d&~e)
     return vars, circuit, 5
 
 def case4():
@@ -187,7 +187,8 @@ def case4():
 def case5():
     vars = get_n_vars(5)
     (a, b, c, d, e) = vars
-    circuit = (~(((((((((((c^(e&((c^b)^a)))^(d&(((c^(e&((c^b)^a)))^b)^a)))^b)^a)|(b&(one^(e^(c&(one^e))))))|(((d&(((e&(one^(c^b)))^c)^b))^(e&c))^(a&(one^(((e^d)^c)^(b&(one^e)))))))|((c&(one^(d^(a&(one^d)))))^(b&(one^(e^(d&(one^e)))))))|((((e^(d&(e^a)))^(c&(one^(e^(d&(one^e))))))^(b&(((e^(d&(one^e)))^c)^(a&(one^c)))))^a))|(d&((e^(c&e))^(b&(one^c)))))|((((e^(d&(((e^(c&(one^e)))^b)^(a&(one^b)))))^(c&(one^e)))^b)^(a&(one^b))))|(((((d&((((e&(one^(c^b)))^c)^b)^a))^c)^b)^(e&(b^(a&(one^c)))))^a)))
+    circuit = (~(((((((((((c^(e&((c^b)^a)))^(d&(((c^(e&((c^b)^a)))^b)^a)))^b)^a)|(b&(1^(e^(c&(1^e))))))|(((d&(((e&(1^(c^b)))^c)^b))^(e&c))^(a&(1^(((e^d)^c)^(b&(1^e)))))))|((c&(1^(d^(a&(1^d)))))^(b&(1^(e^(d&(1^e)))))))|((((e^(d&(e^a)))^(c&(1^(e^(d&(1^e))))))^(b&(((e^(d&(1^e)))^c)^(a&(1^c)))))^a))|(d&((e^(c&e))^(b&(1^c)))))|((((e^(d&(((e^(c&(1^e)))^b)^(a&(1^b)))))^(c&(1^e)))^b)^(a&(1^b))))|(((((d&((((e&(1^(c^b)))^c)^b)^a))^c)^b)^(e&(b^(a&(1^c)))))^a)))
+
     return vars, circuit, 5, 30
 
 def case6():
